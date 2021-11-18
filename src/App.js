@@ -1,14 +1,29 @@
+import { useState } from 'react';
 import './App.css';
-import Person from './components/Person';
+// import Person from './components/Person';
 
 function App() {
+  const [ contador, setContador ] = useState(0);
+
+  const incrementarValor = () => {
+    setContador(contador + 1);
+  }
+
+  const decrementarValor = () => {
+    setContador(contador - 1);
+  }
+
+  console.log("se renderizo App")
+  console.log("contador: ", contador)
+
   return (
     <div className="App">
       <header className="App-header">
-        <h4> Mi primera app en React </h4>
+        <h3> Mi primera app en React </h3>
 
-        <Person name="Alex" age="32" />
-        <Person name="Diego" age="31" />
+        <button onClick={incrementarValor}>incrementar</button>
+        {contador}
+        <button onClick={decrementarValor}>decrementar</button>
 
       </header>
     </div>

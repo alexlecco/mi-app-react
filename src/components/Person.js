@@ -1,10 +1,10 @@
 import './Person.css'
 
-const Person = (props) => {
+const Person = ({ name, age }) => {
   return(
     <div className="person">
-      <p>{props.name}</p>
-      <p>({props.age})</p>
+      <p>{name}</p>
+      <p>({age})</p>
     </div>
   )
 }
