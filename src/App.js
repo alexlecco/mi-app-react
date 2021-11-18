@@ -10,7 +10,7 @@ function App() {
   }
 
   const decrementarValor = () => {
-    setContador(contador - 1);
+    if (contador > 0) setContador(contador - 1);
   }
 
   console.log("se renderizo App")
